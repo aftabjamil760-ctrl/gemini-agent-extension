@@ -1,0 +1,8 @@
+.env
+node_modules/**
+backend/**
+.vscode/**
+.git/**
+README.md
+tsconfig.json
+.vsc-extension-quickstart.md

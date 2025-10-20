@@ -1,0 +1,43 @@
+{
+  "name": "gemini-code-agent",
+  "displayName": "Gemini Code Agent",
+  "publisher": "your-publisher-id",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": ["Other"],
+  "main": "./extension.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "activationEvents": [
+    "onCommand:gemini-agent.refactorCode",
+    "onChatParticipant:gemini.chatParticipant",
+    "onView:chat"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "gemini-agent.refactorCode",
+        "title": "Gemini Agent: Refactor Selected Code"
+      }
+    ],
+    "chatParticipants": [
+      {
+        "id": "gemini.chatParticipant",
+        "label": "Gemini",
+        "name": "gemini",
+        "fullName": "Gemini Code Agent",
+        "description": "Your AI assistant powered by Gemini for coding tasks.",
+        "type": "server",
+        "isDefault": true
+      }
+    ]
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}
