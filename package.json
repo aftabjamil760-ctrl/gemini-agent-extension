@@ -3,6 +3,11 @@
   "displayName": "Gemini Code Agent",
   "publisher": "your-publisher-id",
   "version": "0.0.1",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/aftabjamil760-ctrl/gemini-agent-extension.git"
+},
+
   "engines": {
     "vscode": "^1.90.0"
   },
